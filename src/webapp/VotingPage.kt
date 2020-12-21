@@ -64,24 +64,29 @@ fun Route.votingpage(db: VoteRepository, hashFunction: (String) -> String) {
                     val diasporaluk = params["diasporaluk"] ?: throw IllegalArgumentException("Missing parameter: Diasporal UK")
                     val diasporaleurop = params["diasporaleurop"] ?: throw IllegalArgumentException("Missing parameter: Diasporal Europe")
 
-                    try{
-                        db.addpresident(user.userId, president)
-                        db.addvicepresident(user.userId, vicepresident)
-                        db.addgeneralsec(user.userId, generalsec)
-                        db.addassistfinsec(user.userId, assistgensec)
-                        db.addfinancialsec(user.userId, financialsec)
-                        db.addtreasurer(user.userId, treasurer)
-                        db.addsocialpub(user.userId, socialpubsec)
-                        db.addprovost(user.userId, provost)
-                        db.adddiasporalafrica(user.userId, diasporalafrica)
-                        db.adddiasporaluk(user.userId, diasporaluk)
-                        db.adddiasporaleurop(user.userId, diasporaleurop)
-                    }catch (e: Throwable){
-                        println("an Error Occured $e")
+                    val voted = db.fetchpresident(user.userId)
+
+                    if (voted.isEmpty()){
+                        try{
+                            db.addpresident(user.userId, president)
+                            db.addvicepresident(user.userId, vicepresident)
+                            db.addgeneralsec(user.userId, generalsec)
+                            db.addassistfinsec(user.userId, assistgensec)
+                            db.addfinancialsec(user.userId, financialsec)
+                            db.addtreasurer(user.userId, treasurer)
+                            db.addsocialpub(user.userId, socialpubsec)
+                            db.addprovost(user.userId, provost)
+                            db.adddiasporalafrica(user.userId, diasporalafrica)
+                            db.adddiasporaluk(user.userId, diasporaluk)
+                            db.adddiasporaleurop(user.userId, diasporaleurop)
+                            db.addcompleted(user.userId, "Completed")
+                        }catch (e: Throwable){
+                            println("an Error Occured $e")
+                        }
                     }
+
                 }
             }
-            db.addcompleted(user.userId, "Completed")
             call.redirect(Waiting())
         }
     }

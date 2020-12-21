@@ -92,6 +92,7 @@ interface Repository {
     suspend fun addpresident(userId: String, voted_presidentValue: String): President?
     suspend fun president(id:Int): President?
     suspend fun president(voted_president: String): List<President>
+    suspend fun fetchpresident(username: String): List<President>?
     suspend fun president(): List<President>
     suspend fun updatepresident(id:Int, newvoted_president: String)
     suspend fun removepresident(id:Int):Boolean

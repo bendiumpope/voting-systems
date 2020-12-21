@@ -456,6 +456,12 @@ class VoteRepository : Repository  {
         }.map { toPresident(it) }
     }
 
+    override suspend fun fetchpresident(username: String): List<President> = dbQuery{
+        Presidents.select{
+            (Presidents.user eq username)
+        }.map { toPresident(it) }
+    }
+
     override suspend fun president(): List<President> = dbQuery {
         Presidents.selectAll().map { toPresident(it) }
     }
