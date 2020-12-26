@@ -10,7 +10,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 
-const val RESULT = "/finishedresult"
+//const val RESULT = "/finishedresult"
+const val RESULT = "/fini"
 
 @Location(RESULT)
 class Result
@@ -38,21 +39,21 @@ fun Route.finishedresult(db: VoteRepository) {
                     db.addresult("Emeke Ijebor", "President", emekePres, totalVotes, totalnonVotes)
 
                     //Vice President
-                    val dnessVicePres = db.vicepresident("DNESS-PATIENCE-NKOYE-NKEM-KIFORDU").size
-                    db.addresult("Dness Patience Nkoye Nkem Kifordu", "Vice-President", dnessVicePres, totalVotes, totalnonVotes)
+//                    val dnessVicePres = db.vicepresident("DNESS-PATIENCE-NKOYE-NKEM-KIFORDU").size
+//                    db.addresult("Dness Patience Nkoye Nkem Kifordu", "Vice-President", dnessVicePres, totalVotes, totalnonVotes)
 
                     //General Secretary
-                    val chinyemGenSec = db.generalsec("DR-CHIYEM-ROLLINS-IYADI").size
-                    val emekeGenSec = db.generalsec("EMEKE-OHIANWUSI").size
+//                    val chinyemGenSec = db.generalsec("DR-CHIYEM-ROLLINS-IYADI").size
+//                    val emekeGenSec = db.generalsec("EMEKE-OHIANWUSI").size
                     val luckyGenSec = db.generalsec("LUCKY-ADAGBON").size
 
-                    db.addresult("Dr Chiyem Rollins Iyadi", "General-Secretary", chinyemGenSec, totalVotes, totalnonVotes)
-                    db.addresult("Emeke Ohianwusi", "General-Secretary", emekeGenSec, totalVotes, totalnonVotes)
+//                    db.addresult("Dr Chiyem Rollins Iyadi", "General-Secretary", chinyemGenSec, totalVotes, totalnonVotes)
+//                    db.addresult("Emeke Ohianwusi", "General-Secretary", emekeGenSec, totalVotes, totalnonVotes)
                     db.addresult("Lucky Adagbon", "General-Secretary", luckyGenSec, totalVotes, totalnonVotes)
 
                     //Assistant General Secretary
-                    val detAssGenSec = db.assistfinsec("DET-EMEKE-KOGWUONYE").size
-                    db.addresult("Det Emeke Kogwuonye", "Assistant-General-Secretary", detAssGenSec, totalVotes, totalnonVotes)
+                    val detAssGenSec = db.assistfinsec("EYEMONU-ONYEISI").size
+                    db.addresult("Mr Enyemonu Onyeisi", "Assistant-General-Secretary", detAssGenSec, totalVotes, totalnonVotes)
 
                     //FINANCIAL SECRETARY
                     val asudikeFinSec = db.financialsec("ASUDIKE-TITUS").size
@@ -94,6 +95,7 @@ fun Route.finishedresult(db: VoteRepository) {
         val check = db.users().size
         println("total users: ${check}")
 
-        call.respond(FreeMarkerContent("results.ftl", mapOf("electionResults" to electionResults)))
+        call.respond(FreeMarkerContent("resu.ftl", mapOf("electionResults" to electionResults)))
+//        call.respond(FreeMarkerContent("results.ftl", mapOf("electionResults" to electionResults)))
     }
 }

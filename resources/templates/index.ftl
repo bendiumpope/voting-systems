@@ -36,10 +36,11 @@
 				Please Refresh Your browser at the end
 				of the count down and click on the vote button
 			</span>
+			<p>Please note that you can only vote once. If you vote more than once only your first vote is counted</p>
 		</div>
 		<div class="d-flex flex-row justify-center align-items-center">
 		    <button class="btn btn-warning">
-               </h4><a href="/votingpage">VOTE</a></h4>
+               </h4><a href="/index">VOTE</a></h4>
             </button>
             <button class="btn btn-warning ml-3">
                </h4><a href="/logout">Signout</a></h4>

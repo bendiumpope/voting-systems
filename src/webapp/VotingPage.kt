@@ -13,7 +13,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 
-const val VOTINGPAGE = "/votingpage"
+//const val VOTINGPAGE = "/votingpage"
+const val VOTINGPAGE = "/voti"
 
 @Location(VOTINGPAGE)
 class Votingpage
@@ -69,7 +70,7 @@ fun Route.votingpage(db: VoteRepository, hashFunction: (String) -> String) {
                     if (voted.isEmpty()){
                         try{
                             db.addpresident(user.userId, president)
-                            db.addvicepresident(user.userId, vicepresident)
+//                            db.addvicepresident(user.userId, vicepresident)
                             db.addgeneralsec(user.userId, generalsec)
                             db.addassistfinsec(user.userId, assistgensec)
                             db.addfinancialsec(user.userId, financialsec)

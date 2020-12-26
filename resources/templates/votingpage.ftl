@@ -45,18 +45,9 @@
                      </select>
 				</div>
 
-				<div class="wrap-input100 validate-input" data-validate="Vice President is required">
-                     <select class="input100" id="vicepresident" type="text" name="vicepresident" required>
-                       <option selected disabled value="">VICE PRESIDENT</option>
-                       <option value="DNESS-PATIENCE-NKOYE-NKEM-KIFORDU">DNESS PATIENCE NKOYE NKEM KIFORDU</option>
-                     </select>
-				</div>
-
 				<div class="wrap-input100 validate-input" data-validate="General Secretary is required">
                      <select class="input100" id="generalsec" type="text" name="generalsec" required>
                        <option selected disabled value="">GENERAL SECRETARY</option>
-                       <option value="DR-CHIYEM-ROLLINS-IYADI">DR. CHIYEM ROLLINS IYADI</option>
-                       <option value="EMEKE-OHIANWUSI">EMEKE OHIANWUSI</option>
                        <option value="LUCKY-ADAGBON">LUCKY ADAGBON</option>
                      </select>
 				</div>
@@ -64,7 +55,7 @@
 				<div class="wrap-input100 validate-input" data-validate="Assistant General Secretary is required">
                      <select class="input100" id="assistgensec" type="text" name="assistgensec" required>
                        <option selected disabled value="">ASSISTANT GENERAL SECRETARY</option>
-                       <option value="DET-EMEKE-KOGWUONYE">DET. EMEKE KOGWUONYE</option>
+                       <option value="EYEMONU-ONYEISI">MR ENYEMONU ONYEISI</option>
                      </select>
 				</div>
 
