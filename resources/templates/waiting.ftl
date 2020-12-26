@@ -25,8 +25,9 @@
         <div class="contact100-form2">
 			<span class="contact100-form-title">
 				THANKS FOR VOTING, RESULTS WILL BE OUT SOON!!!
-				<p>Please note that you can only vote once. If you vote more than once only your first vote is counted</p>
 			</span>
+			<p>Please note that you can only vote once. If you vote more than once only your first vote is counted</p>
+
             <p id="days"></p>
             <p id="hours"></p>
             <p id="mins"></p>

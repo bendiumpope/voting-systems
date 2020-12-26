@@ -5,8 +5,9 @@
     var myfunc = setInterval(function() {
 
     var now = new Date().getTime();
-//    var timeleft = countDownDate - now;
-    var timeleft = now - now;
+    var timeleft = countDownDate - now;
+//    var timeleft = now - now;
+
     // Calculating the days, hours, minutes and seconds left
     var days = Math.floor(timeleft / (1000 * 60 * 60 * 24));
     var hours = Math.floor((timeleft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
@@ -26,6 +27,6 @@
         document.getElementById("hours").innerHTML = ""
         document.getElementById("mins").innerHTML = ""
         document.getElementById("secs").innerHTML = ""
-        document.getElementById("end").innerHTML = "TIME UP!!";
+        document.getElementById("end").innerHTML = "Voting has ended click on result to see result";
     }
     }, 1000);
