@@ -90,10 +90,10 @@ fun Route.create(db: VoteRepository, hashFunction: (String) -> String){
     get<Create> {
         val user = call.sessions.get<EPSession>()?.let { db.user(it.userId) }
 
-//        if (user?.role != "admin") {
-//            call.redirect(Login())
-//        } else {
+        if (user?.role != "admin") {
+            call.redirect(Login())
+        } else {
             call.respond(FreeMarkerContent("signup.ftl", mapOf("error" to it.error)))
-//        }
+        }
     }
 }
