@@ -13,8 +13,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 
-const val VOTINGPAGE = "/votingpage"
-//const val VOTINGPAGE = "/voti"
+//const val VOTINGPAGE = "/votingpage"
+const val VOTINGPAGE = "/voti"
 
 @Location(VOTINGPAGE)
 class Votingpage

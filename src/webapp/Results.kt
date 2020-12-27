@@ -10,8 +10,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 
-//const val RESULT = "/finishedresult"
-const val RESULT = "/fini"
+const val RESULT = "/finishedresult"
+//const val RESULT = "/fini"
 
 @Location(RESULT)
 class Result
@@ -95,7 +95,7 @@ fun Route.finishedresult(db: VoteRepository) {
         val check = db.users().size
         println("total users: ${check}")
 
-        call.respond(FreeMarkerContent("resu.ftl", mapOf("electionResults" to electionResults)))
-//        call.respond(FreeMarkerContent("results.ftl", mapOf("electionResults" to electionResults)))
+//        call.respond(FreeMarkerContent("resu.ftl", mapOf("electionResults" to electionResults)))
+        call.respond(FreeMarkerContent("results.ftl", mapOf("electionResults" to electionResults)))
     }
 }
