@@ -40,7 +40,7 @@
 		</div>
 		<div class="d-flex flex-row justify-center align-items-center">
 		    <button class="btn btn-warning">
-               </h4><a href="/index">VOTE</a></h4>
+               </h4><a href="/votingpage">VOTE</a></h4>
             </button>
             <button class="btn btn-warning ml-3">
                </h4><a href="/logout">Signout</a></h4>

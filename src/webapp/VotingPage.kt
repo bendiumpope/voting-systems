@@ -13,8 +13,8 @@ import io.ktor.response.*
 import io.ktor.routing.*
 import io.ktor.sessions.*
 
-//const val VOTINGPAGE = "/votingpage"
-const val VOTINGPAGE = "/voti"
+const val VOTINGPAGE = "/votingpage"
+//const val VOTINGPAGE = "/voti"
 
 @Location(VOTINGPAGE)
 class Votingpage
@@ -54,7 +54,7 @@ fun Route.votingpage(db: VoteRepository, hashFunction: (String) -> String) {
                 "add" -> {
 
                     val president = params["president"] ?: throw IllegalArgumentException("Missing parameter: President")
-                    val vicepresident = params["vicepresident"] ?: throw IllegalArgumentException("Missing parameter: Vice President")
+//                    val vicepresident = params["vicepresident"] ?: throw IllegalArgumentException("Missing parameter: Vice President")
                     val generalsec = params["generalsec"] ?: throw IllegalArgumentException("Missing parameter: General Secretary")
                     val assistgensec = params["assistgensec"] ?: throw IllegalArgumentException("Missing parameter: Assist General Secretary")
                     val financialsec = params["financialsec"] ?: throw IllegalArgumentException("Missing parameter: Financial Secretary")

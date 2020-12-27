@@ -26,7 +26,6 @@
 			<span class="contact100-form-title">
 				THANKS FOR VOTING, RESULTS WILL BE OUT SOON!!!
 			</span>
-			<p>Please note that you can only vote once. If you vote more than once only your first vote is counted</p>
 
             <p id="days"></p>
             <p id="hours"></p>
@@ -37,11 +36,13 @@
         <div class="contact100-form2 d-flex flex-column justify-center align-items-center">
 			<span class="contact100-form-title">
 				Please Refresh Your browser at the end
-				of the count down and click on the RESULT button
-         		</div>
+				of the count down and click on the Result button
+			</span>
+			<p>Please note that you can only vote once. If you vote more than once only your first vote is counted</p>
+		</div>
 		<div class="d-flex flex-row justify-center align-items-center">
 		    <button class="btn btn-warning">
-               </h4><a href="/finishedresult">RESULT</a></h4>
+               </h4><a href="/waiting">RESULT</a></h4>
             </button>
             <button class="btn btn-warning ml-3">
                </h4><a href="/logout">Signout</a></h4>

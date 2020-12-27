@@ -47,7 +47,7 @@ fun Route.login(db: VoteRepository, hashFunction: (String) -> String) {
                 println("an error occured $e")
             }*/
             call.sessions.set(EPSession(login.userId))
-            call.redirect(Index())
+            call.redirect(Votingpage())
         }
     }
 

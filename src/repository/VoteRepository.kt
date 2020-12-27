@@ -713,7 +713,7 @@ class VoteRepository : Repository  {
     }
 
     override suspend fun clear(): Int = dbQuery{
-        Users.deleteAll()
+//        Users.deleteAll()
         AssistFinSecs.deleteAll()
         Completeds.deleteAll()
         DiasporalAfricas.deleteAll()
